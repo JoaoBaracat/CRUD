@@ -4,12 +4,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Models_Nao vou usar\**" />
+    <EmbeddedResource Remove="Models_Nao vou usar\**" />
+    <None Remove="Models_Nao vou usar\**" />
+  </ItemGroup>
+
 	<ItemGroup>
 		<PackageReference Include="FluentValidation" Version="9.4.0" />
 	</ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models_Nao vou usar\" />
-  </ItemGroup>
 
 </Project>
