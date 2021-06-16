@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CRUD.Net.App\CRUD.Net.App.csproj" />
+    <ProjectReference Include="..\CRUD.Net.Infra.Data\CRUD.Net.Infra.Data.csproj" />
+    <ProjectReference Include="..\CRUD.Net.Infra.IoC\CRUD.Net.Infra.IoC.csproj" />
+  </ItemGroup>
+
+  
+
+</Project>

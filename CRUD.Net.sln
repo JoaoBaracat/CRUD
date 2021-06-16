@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{4828B220-AB95-4410-920B-A6F7BC6B8972}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{43F02D7F-1F25-4127-8DB8-8BE1598318EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{5C4E041F-0969-46A4-A721-4015D63C1951}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{5F87234E-D019-4558-AED2-7EC69A28826E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRUD.Net.App", "src\CRUD.Net.App\CRUD.Net.App.csproj", "{4F477EA1-4E3C-42E4-8B08-7457B6EAEBB6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRUD.Net.Domain", "src\CRUD.Net.Domain\CRUD.Net.Domain.csproj", "{05CEE74F-D65D-420C-948D-CCC95686DBB2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRUD.Net.Infra.Data", "src\CRUD.Net.Infra.Data\CRUD.Net.Infra.Data.csproj", "{B70B8020-95DC-44C0-900B-BC8A9A0B39B7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRUD.Net.Infra.IoC", "src\CRUD.Net.Infra.IoC\CRUD.Net.Infra.IoC.csproj", "{0EE7D247-859D-4495-A9BA-4408B7E565E3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRUD.Net.UI.WF", "src\CRUD.Net.UI.WF\CRUD.Net.UI.WF.csproj", "{2E684D81-56CF-42A3-B50C-A911EECDF6CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F477EA1-4E3C-42E4-8B08-7457B6EAEBB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F477EA1-4E3C-42E4-8B08-7457B6EAEBB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F477EA1-4E3C-42E4-8B08-7457B6EAEBB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F477EA1-4E3C-42E4-8B08-7457B6EAEBB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05CEE74F-D65D-420C-948D-CCC95686DBB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05CEE74F-D65D-420C-948D-CCC95686DBB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05CEE74F-D65D-420C-948D-CCC95686DBB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05CEE74F-D65D-420C-948D-CCC95686DBB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B70B8020-95DC-44C0-900B-BC8A9A0B39B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B70B8020-95DC-44C0-900B-BC8A9A0B39B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B70B8020-95DC-44C0-900B-BC8A9A0B39B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B70B8020-95DC-44C0-900B-BC8A9A0B39B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EE7D247-859D-4495-A9BA-4408B7E565E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EE7D247-859D-4495-A9BA-4408B7E565E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EE7D247-859D-4495-A9BA-4408B7E565E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EE7D247-859D-4495-A9BA-4408B7E565E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E684D81-56CF-42A3-B50C-A911EECDF6CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E684D81-56CF-42A3-B50C-A911EECDF6CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E684D81-56CF-42A3-B50C-A911EECDF6CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E684D81-56CF-42A3-B50C-A911EECDF6CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4F477EA1-4E3C-42E4-8B08-7457B6EAEBB6} = {4828B220-AB95-4410-920B-A6F7BC6B8972}
+		{05CEE74F-D65D-420C-948D-CCC95686DBB2} = {43F02D7F-1F25-4127-8DB8-8BE1598318EE}
+		{B70B8020-95DC-44C0-900B-BC8A9A0B39B7} = {5C4E041F-0969-46A4-A721-4015D63C1951}
+		{0EE7D247-859D-4495-A9BA-4408B7E565E3} = {5C4E041F-0969-46A4-A721-4015D63C1951}
+		{2E684D81-56CF-42A3-B50C-A911EECDF6CA} = {5F87234E-D019-4558-AED2-7EC69A28826E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53C7C7D3-2EC7-413D-8FF5-B0DF0E026AFA}
+	EndGlobalSection
+EndGlobal
