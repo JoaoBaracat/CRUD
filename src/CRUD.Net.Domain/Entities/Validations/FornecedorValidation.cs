@@ -20,7 +20,10 @@ namespace CRUD.Net.Domain.Entities.Validations
 				cnpj = cnpj.Trim();
 				cnpj = cnpj.Replace(".", "").Replace("-", "").Replace("/", "");
 				if (cnpj.Length != 14)
+                {
 					context.AddFailure("CNPJ inválido");
+					return;
+                }
 				tempCnpj = cnpj.Substring(0, 12);
 				soma = 0;
 				for (int i = 0; i < 12; i++)
