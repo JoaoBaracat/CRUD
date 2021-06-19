@@ -14,10 +14,12 @@ namespace CRUD.Net.App.Services
     public class FornecedorApp : AppBase, IFornecedorApp
     {
         private readonly IFornecedorRepository _fornecedorRepository;
+        private readonly IProdutoRepository _produtoRepository;
 
-        public FornecedorApp(IFornecedorRepository fornecedorRepository, IUnitOfWork unitOfWork, INotifier notifier) : base(unitOfWork, notifier)
+        public FornecedorApp(IFornecedorRepository fornecedorRepository, IUnitOfWork unitOfWork, INotifier notifier, IProdutoRepository produtoRepository) : base(unitOfWork, notifier)
         {
             _fornecedorRepository = fornecedorRepository;
+            _produtoRepository = produtoRepository;
         }
 
         public IEnumerable<FornecedorViewModel> GetByNomeADO(string nome)
@@ -84,6 +86,12 @@ namespace CRUD.Net.App.Services
                 return;
             }
 
+            if (!fornecedor.Ativo && _produtoRepository.HasAnyProdutoByFornecedor(id))
+            {
+                Notify($"O fornecedor {id} não pode ser inativo, pois possui produtos vinculados a ele.");
+                return;
+            }
+
             fornecedorToUpdate.Nome = fornecedor.Nome;
             fornecedorToUpdate.Endereco = fornecedor.Endereco;
             fornecedorToUpdate.CNPJ = new String(fornecedor.CNPJ.Where(Char.IsDigit).ToArray());
@@ -101,6 +109,12 @@ namespace CRUD.Net.App.Services
             if (fornecedorToDelete == null)
             {
                 Notify($"O fornecedor {id} não foi encontrado.");
+                return;
+            }
+
+            if (_produtoRepository.HasAnyProdutoByFornecedor(id))
+            {
+                Notify($"O fornecedor {id} não pode ser excluído, pois possui produtos vinculados a ele.");
                 return;
             }
 

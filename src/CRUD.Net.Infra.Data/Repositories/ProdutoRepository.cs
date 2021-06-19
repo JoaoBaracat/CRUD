@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 
 namespace CRUD.Net.Infra.Data.Repositories
 {
@@ -52,6 +53,11 @@ namespace CRUD.Net.Infra.Data.Repositories
                 retList.Add(temp);
             }
             return retList;
+        }
+
+        public bool HasAnyProdutoByFornecedor(Guid fornecedorId)
+        {
+            return _produto.Where(x => x.Fornecedor.Id == fornecedorId).Any();
         }
     }
 }

@@ -7,6 +7,7 @@ namespace CRUD.Net.Domain.Repositories
 {
     public interface IProdutoRepository : IRepository<Produto>
     {
+        bool HasAnyProdutoByFornecedor(Guid fornecedorId);
         IEnumerable<ProdutoViewModel> GetByNomeADO(string nome);
     }
 }
